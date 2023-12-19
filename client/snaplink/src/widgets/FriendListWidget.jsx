@@ -13,7 +13,7 @@ function FriendListWidget({ userId }) {
 
   async function getFriends() {
     try{
-    const { data } = await axios.get(`http://localhost:3001/users/${userId}/friends`, {
+    const { data } = await axios.get(`https://snaplink-backend.onrender.com/users/${userId}/friends`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
