@@ -30,7 +30,7 @@ function MyPostWidget({ picturePath }) {
       formData.append('picture', image);
     }
 
-    const posts = await axios.post('http://localhost:3001/posts', formData, {
+    const posts = await axios.post('https://snaplink-backend.onrender.com/posts', formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
         Authorization: `Bearer ${token}`,
