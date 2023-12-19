@@ -23,7 +23,7 @@ function ProfilePage() {
       if (luser && userId === luser._id) {
         setUser(luser);
       } else {
-        const { data } = await axios.get(`http://localhost:3001/users/${userId}`, {
+        const { data } = await axios.get(`https://snaplink-backend.onrender.com/users/${userId}`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
