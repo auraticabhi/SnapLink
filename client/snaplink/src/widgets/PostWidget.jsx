@@ -15,7 +15,7 @@ function PostWidget({ userId, isProfile = false }) {
   useEffect(() => {
     async function getPosts() {
       try{
-      let { data } = await axios.get('http://localhost:3001/posts', {
+      let { data } = await axios.get('https://snaplink-backend.onrender.com/posts', {
         headers: { Authorization: `Bearer ${token}` },
       });
       dispatch(setPosts({ posts: data }));
@@ -28,7 +28,7 @@ function PostWidget({ userId, isProfile = false }) {
 
     async function getUserPosts() {
       try{
-      const { data } = await axios.get(`http://localhost:3001/posts/${userId}/posts`, {
+      const { data } = await axios.get(`https://snaplink-backend.onrender.com/posts/${userId}/posts`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       dispatch(setPosts({ posts: data }));
