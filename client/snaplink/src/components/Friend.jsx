@@ -21,7 +21,7 @@ function Friend({friendId, name, userPicturePath}) {
 
     const patchFriend = async()=>{
       try{
-        const {data} = await axios.patch(`http://localhost:3001/users/${_id}/${friendId}`,
+        const {data} = await axios.patch(`https://snaplink-backend.onrender.com/users/${_id}/${friendId}`,
         {},  
         {headers: {
             "Authorization": `Bearer ${token}`
