@@ -30,7 +30,7 @@ function UserWidget({ userId, picturePath }) {
     //console.log(mode, " ", pathname);
     async function getUser(){
         try{
-        const data= await axios.get(`http://localhost:3001/users/${userId}`, {headers: {Authorization: `Bearer ${token}`}});
+        const data= await axios.get(`https://snaplink-backend.onrender.com/users/${userId}`, {headers: {Authorization: `Bearer ${token}`}});
         console.log(data.data);
         setUser(data.data);
         }
@@ -79,7 +79,7 @@ function UserWidget({ userId, picturePath }) {
             formData.append('picture', blob);
       
             try {
-              const user = await axios.patch('http://localhost:3001/users/upload', formData, {
+              const user = await axios.patch('https://snaplink-backend.onrender.com/users/upload', formData, {
                 headers: {
                   'content-Type': 'multipart/form-data',
                   Authorization: `Bearer ${token}`,
@@ -106,7 +106,7 @@ function UserWidget({ userId, picturePath }) {
       
     async function getPosts(){
         try{
-        let {data} = await axios.get("http://localhost:3001/posts", {
+        let {data} = await axios.get("https://snaplink-backend.onrender.com/posts", {
             headers: { "Authorization": `Bearer ${token}`}
         });
         // console.log(data);
@@ -120,7 +120,7 @@ function UserWidget({ userId, picturePath }) {
 
     async function getUserPosts(id){
         try{
-        const {data} = await axios.get(`http://localhost:3001/posts/${id}/posts`, {
+        const {data} = await axios.get(`https://snaplink-backend.onrender.com/posts/${id}/posts`, {
             headers: { "Authorization": `Bearer ${token}`}
         });
         console.log("user", data);
@@ -133,7 +133,7 @@ function UserWidget({ userId, picturePath }) {
     }
 
     // async function deleteAccount(){
-    //     const data=await axios.patch('http://localhost:3001/users/delete', {
+    //     const data=await axios.patch('https://snaplink-backend.onrender.com/users/delete', {
     //         user: userId,
     //         loggedUser: userid
     //     }, 
