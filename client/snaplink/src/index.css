@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&family=Rubik:wght@400;500;700&family=Space+Mono:wght@700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html,
+body,
+#root,
+.app {
+    height: 100%;
+    width: 100%;
+    font-family: "Rubik", sans-serif;
+}
+
+#imggg {
+    background-image: url('./assets/backmain.png');
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+.image {
+    width: 20px;
+}
+
+.opacity-0 {
+    opacity: 0;
+}
+
+.opacity-100 {
+    opacity: 1;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.transition-all {
+    transition-property: all;
+}
+
+#pic[type="file"]::file-selector-button {
+    opacity: 0.9;
+    border-radius: 21px;
+}
+
+#smedia {
+    width: 47px;
+    height: 47px;
+    border-radius: 10px;
+}
+
+#imgbx {
+    max-width: 300px;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
