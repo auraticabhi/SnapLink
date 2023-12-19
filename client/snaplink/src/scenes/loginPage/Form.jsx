@@ -31,7 +31,7 @@ const Form = () => {
 
     let registerRes = null;
     try {
-      registerRes = await axios.post('http://localhost:3001/auth/register', fdata, {
+      registerRes = await axios.post('https://snaplink-backend.onrender.com/auth/register', fdata, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -53,7 +53,7 @@ const Form = () => {
     const ld = toast.loading("Loading...");
     let loginRes = null;
     try {
-      loginRes = await axios.post('http://localhost:3001/auth/login', formData);
+      loginRes = await axios.post('https://snaplink-backend.onrender.com/auth/login', formData);
     } catch (err) {
       alert("Password is incorrect or user doesn't exist");
       toast.dismiss(ld);
