@@ -19,7 +19,7 @@ function Post({ postId, postUserId, name, description, location, picturePath, us
 
     async function patchLike() {
         try {
-            const { data } = await axios.patch(`http://localhost:3001/posts/${postId}/like`, {
+            const { data } = await axios.patch(`https://snaplink-backend.onrender.com/posts/${postId}/like`, {
                 userId: loggedInUserId
             }, {
                 headers: {
@@ -40,7 +40,7 @@ function Post({ postId, postUserId, name, description, location, picturePath, us
                 return;
             }
 
-            const { data } = await axios.patch(`http://localhost:3001/posts/${postId}/comment`, {
+            const { data } = await axios.patch(`https://snaplink-backend.onrender.com/posts/${postId}/comment`, {
                 name: nm,
                 comment
             }, {
@@ -60,7 +60,7 @@ function Post({ postId, postUserId, name, description, location, picturePath, us
     const mode = useSelector((state)=>state.mode);
     async function deletePost() {
         try {
-            const { data: posts } = await axios.patch(`http://localhost:3001/posts/${postId}/delete`, {
+            const { data: posts } = await axios.patch(`https://snaplink-backend.onrender.com/posts/${postId}/delete`, {
                 user: loggedInUserId,
                 postUser: postUserId
             }, {
