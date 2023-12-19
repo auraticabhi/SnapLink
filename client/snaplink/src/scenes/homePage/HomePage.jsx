@@ -33,7 +33,7 @@ function HomePage() {
 
     async function getUser() {
         try {
-            const data = await axios.get(`http://localhost:3001/users/${userId}`, {
+            const data = await axios.get(`https://snaplink-backend.onrender.com/users/${userId}`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             //console.log(data.data);
