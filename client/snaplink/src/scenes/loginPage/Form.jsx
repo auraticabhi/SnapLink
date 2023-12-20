@@ -86,7 +86,7 @@ const Form = () => {
 
   return (
     <div className="px-4 py-4">
-      <div className="text-center bg-gray-700 text-black bg-opacity-60 mx-auto max-w-xs rounded-lg">
+      <div className="text-center bg-gray-700 text-black bg-opacity-60 mb-4 md:mx-auto max-w-xs rounded-lg">
       <div>
         <Button onClick={() => setPageType('register')}><div className='text-white hover:text-blue-300'>Register</div></Button>
         <Button onClick={() => setPageType('login')}><div className='text-white hover:text-blue-300'>Login</div></Button>
