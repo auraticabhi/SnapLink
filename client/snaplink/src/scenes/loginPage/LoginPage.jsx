@@ -12,7 +12,7 @@ function LoginPage() {
         </Typography>
       </div>
 
-      <div id="srl" className={`md:w-10/12 w-6/12 p-6 mx-auto my-auto rounded-3xl overflow-auto ${mode === 'dark' ? 'bg-slate-900' : 'bg-white'} bg-opacity-60 shadow-md`}>
+      <div id="srl" className={`md:w-10/12 w-11/12 p-6 mx-auto my-auto rounded-3xl overflow-auto ${mode === 'dark' ? 'bg-slate-900' : 'bg-white'} bg-opacity-60 shadow-md`}>
         <Typography variant="h5" className="font-medium text-blue-400 mb-5 text-center">
           <div className='font-semibold'>Welcome to SnapLink, the Social Media for Sociopaths!</div>
         </Typography>
