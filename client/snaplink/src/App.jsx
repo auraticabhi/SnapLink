@@ -47,7 +47,7 @@ function App() {
     <div>
       <div className="app">
         <Routes>
-          <Route path="/" element={<LoginPage />} />
+          <Route path="/" element={userId?<Navigate to="/home" />:<LoginPage />} />
           <Route
             path="/home"
             element={
