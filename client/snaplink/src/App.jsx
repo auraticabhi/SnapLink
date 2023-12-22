@@ -51,22 +51,14 @@ function App() {
         else return false;
     })
 
-    return ( 
-        <div>
-        {
-        !userr?(
-            <Loading/>
-        ):(
+    return (
         <div className = "app">
         <Routes>
         <Route path = "/" element = { < LoginPage / > }/> 
-        <Route path = "/home" element = { isLogin ? ( < HomePage / > ) : ( < Navigate to = "/" / > ) }/> 
-        <Route path = "/profile/:userId" element = { isLogin ? < ProfilePage key = { location.pathname } />:<Navigate to="/" />}/> 
+        <Route path = "/home" element = { isLogin ? ( userr?< HomePage / >:<Loading/> ) : ( < Navigate to = "/" / > ) }/> 
+        <Route path = "/profile/:userId" element = { isLogin ? ( userr?< ProfilePage key = { location.pathname } />:<Loading/> ):<Navigate to="/" />}/> 
         </Routes> 
-        </div>
-        )                                             
-        }                                             
-        </div>                                             
+        </div>                                          
         )
     }
 
