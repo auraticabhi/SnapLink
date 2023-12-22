@@ -2,7 +2,12 @@ import { Navigate, Routes, Route, useLocation } from 'react-router-dom'
 import HomePage from './scenes/homePage/HomePage'
 import LoginPage from './scenes/loginPage/LoginPage'
 import ProfilePage from './scenes/profilePage/ProfilePage'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { setUserx } from './state'
+import { useState, useEffect } from 'react'
+import toast from 'react-hot-toast'
+import axios from 'axios'
+import Loading from './components/Loading'
 
 function App() {
 
