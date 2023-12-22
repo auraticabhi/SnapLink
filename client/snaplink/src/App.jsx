@@ -55,7 +55,7 @@ function App() {
         <div>
         {
         !userr?(
-            </Loading>
+            <Loading/>
         ):(
         <div className = "app">
         <Routes>
